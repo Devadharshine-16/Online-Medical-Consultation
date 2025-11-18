@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Doctors from "./pages/Doctors";
+import DoctorsConsultation from "./pages/DoctorsConsultation";
 import BookAppointment from "./pages/BookAppointment";
 import Appointment from "./pages/Appointment";
 import AppointmentForm from "./pages/AppointmentForm";
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
+        <Route path="/doctors-consultation" element={<DoctorsConsultation />} />
         <Route path="/book-appointment" element={<BookAppointment />} />
         <Route path="/appointment-form" element={<AppointmentForm />} />
         <Route path="/order-medicine" element={<OrderMedicine />} />
