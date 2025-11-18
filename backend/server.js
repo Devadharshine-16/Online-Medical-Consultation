@@ -9,8 +9,20 @@ import appointmentRoutes from "./routes/appointment.js";
 dotenv.config();
 const app = express();
 
+// CORS Configuration
+const corsOptions = {
+  origin: [
+    'https://medicare-frontend-fawn.vercel.app', // Production frontend
+    'http://localhost:5173',                    // Vite default dev server
+    'http://localhost:3000',                    // Common React dev server
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
 // Middlewares
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // DB Connection
